@@ -192,10 +192,15 @@ MACH_HEADER_MIN_LENGTH = 24     # 6 32-bit int
 FAT_HEADER_LENGTH = 8           # fat_header length, 8 bytes
 FAT_ARCH_LENGTH = 20            # fat_arch length, 20 bytes
 
+""" 
+cputype and cpusubtype can be found: 
+http://www.opensource.apple.com/source/cctools/cctools-862/include/mach/machine.h 
+"""
 CPU_TYPES = {
     0x00000007: 'X86',
     0x01000007: 'X86_64',
     0x0000000c: 'ARM',
+    0x0100000c: 'ARM64',
     0x00000012: 'POWERPC',
     0x01000012: 'POWERPC64',
 }
